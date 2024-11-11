@@ -1,12 +1,12 @@
 import unittest
 from selenium import webdriver
 from pages.product_page import ProductPage
-from utils.config import AddToCartProduct_URL
+from utils.config import Product_URL
 
 class TestAddToCart(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
-        self.driver.get(AddToCartProduct_URL) 
+        self.driver.get(Product_URL) 
 
     def test_add_to_cart(self):
         product_page = ProductPage(self.driver)
